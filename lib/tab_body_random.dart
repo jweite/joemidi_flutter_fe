@@ -9,6 +9,25 @@ class TabBodyRandom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Random Tab'));
+    return Row(
+      children: List.generate(8, (rowIndex) {
+        return Expanded(
+          child: Column(
+            children: List.generate(8, (columnIndex) {
+              return Expanded(
+                child: Container(
+                  margin: EdgeInsets.all(2),
+                  child: ElevatedButton(
+                    onPressed: null,
+                    style: ElevatedButton.styleFrom(minimumSize: Size.fromHeight(1000)),
+                    child: Text("$rowIndex:$columnIndex")
+                  )
+                )
+              );
+            })
+          )
+        );
+      })
+    );
   }
 }
