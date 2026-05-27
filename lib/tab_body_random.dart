@@ -19,7 +19,10 @@ class TabBodyRandom extends StatelessWidget {
                   margin: EdgeInsets.all(2),
                   child: ElevatedButton(
                     onPressed: null,
-                    style: ElevatedButton.styleFrom(minimumSize: Size.fromHeight(1000)),
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size.fromHeight(1000),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    ),
                     child: Text("$rowIndex:$columnIndex")
                   )
                 )
