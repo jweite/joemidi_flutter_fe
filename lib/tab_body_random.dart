@@ -18,7 +18,7 @@ class TabBodyRandom extends StatelessWidget {
                 child: Container(
                   margin: EdgeInsets.all(2),
                   child: ElevatedButton(
-                    onPressed: null,
+                    onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       minimumSize: Size.fromHeight(1000),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),

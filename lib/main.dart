@@ -6,20 +6,38 @@ import 'package:joemidi_flutter_fe/tab_body_setlists.dart';
 import 'package:joemidi_flutter_fe/tab_body_show.dart';
 import 'package:joemidi_flutter_fe/tab_body_songs.dart';
 import 'package:joemidi_flutter_fe/tab_body_sound_generators.dart';
+import 'package:pdfrx/pdfrx.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  pdfrxFlutterInitialize(); 
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     var theme = ThemeData(
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
       useMaterial3: true,
+      colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
+      scaffoldBackgroundColor: Colors.amber.shade50,
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.white,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(5), 
+          ),
+          textStyle: TextStyle(
+            fontSize: 16,
+            color: Colors.black,
+          ),
+          foregroundColor: Colors.black,
+        ),      
+      ),
     );
 
     return MaterialApp(
